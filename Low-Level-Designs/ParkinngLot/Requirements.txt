@@ -1,0 +1,43 @@
+Requirements:
+
+    Extensible:
+
+        1. System should be extensible to support different vehicle types such as bikes , car , truck and bus , etc.
+
+        2. Each parking slot supports a specific type of parking 
+
+        3. System should support multiple pricing strategy 
+            -- Time-based (with peal/ non-peak pricing)
+            -- Event-based (COncerts/weekend)
+
+        4. Should it supports multiple Payemnt method?
+            --> Yes
+
+    Dynamic user Input:
+
+        1. How many parking floors and parking slots can the parking have?
+            --- The System should allow dynamic configuration of floors and slots per floor. Each slot must be mapped to a vehicle type to be parked accordingly.
+
+        2. How many gates shpuld our system support?
+            --- The system should have multiple entry and exit gate.
+                ---- The Entry gate will issue the ticket with all the details like time , parking slot , vehicle details etc.
+                ---- The Exit gate will calculate the final cost.
+
+    Concurrency:
+
+        1. Are we building a system just for single parking lot?
+            --- yes Single 
+
+        2. Do we need to ensure that no two vehicles get the same parking spot?
+           --- yes, the system should use proper locking mechanisms or synchronized access to parking slot assignments.
+
+
+
+i have came up with a idea 
+
+entites that are required are Gate , Entry gate exit gate , parkinglot , parking floor , parking spot vehicletype , vehicle , bike , car etc.. (these are from vehicle factorydesign) pricing strategy (Eventbased , timebased) payemnt processor-> paymentStrategy , ticket 
+
+
+client visit the gate :
+    if it is entry gate , parkingLot search for the nearest floor and parking floor finds nearest spot of that particular vehicle, change the status of that spot.
+    
