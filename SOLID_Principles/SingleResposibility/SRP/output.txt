@@ -1,0 +1,3 @@
+Data of Arpan Bhowmick saved into database
+Email is sent to abhowmick@gmail.com
+Arpan Bhowmickis registered successfully
