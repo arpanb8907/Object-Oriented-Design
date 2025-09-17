@@ -1,0 +1,2 @@
+User is fetched from SQL DB
+User is fetched from Mongo DB
